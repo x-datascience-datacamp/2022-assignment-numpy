@@ -41,7 +41,11 @@ def max_index(X):
     j = 0
 
     # TODO
-    i=1
+    if not isinstance(X,np.ndarray):
+    	raise ValueError("input an array")
+    if X.ndim != 2 : 
+    	raise ValueError("input a 2D array")
+    i,j = np.unravel_index(X.argmax(), X.shape)
 
     return i, j
 
@@ -55,14 +59,21 @@ def wallis_product(n_terms):
     Parameters
     ----------
     n_terms : int
-        Number of steps in the Wallis product. Note that `n_terms=0` will
-        consider the product to be `1`.
+        Number of steps in the Wallis product. Note that n_terms=0 will
+        consider the product to be 1.
 
     Returns
     -------
     pi : float
-        The approximation of order `n_terms` of pi using the Wallis product.
+        The approximation of order n_terms of pi using the Wallis product.
     """
     # XXX : The n_terms is an int that corresponds to the number of
-    # terms in the product. For example 10000.
-    return 0.
+    # terms in the product. For example 10000
+
+    product = 1
+
+    for i in range(1, n_terms + 1):
+        term = (2 * i) / (2 * i - 1) * (2 * i) / (2 * i + 1)
+        product *= term
+
+    return 2 * product
