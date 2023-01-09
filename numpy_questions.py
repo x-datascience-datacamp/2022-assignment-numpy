@@ -45,7 +45,7 @@ def max_index(X):
         raise ValueError("Please input a numpy array.")
     if len(X.shape) != 2:
         raise ValueError("Please input a 2D array.")
-    i ,j = np.unravel_index(X.argmax(), X.shape)
+    i, j = np.unravel_index(X.argmax(), X.shape)
     return i, j
 
 
