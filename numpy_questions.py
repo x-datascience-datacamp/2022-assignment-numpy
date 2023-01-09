@@ -89,7 +89,7 @@ def wallis_product(n_terms):
     # Return the product multiplied by 2
     return product * 2
 
-# Pi approximation of order
+# Pi approximation of order 16
 print(wallis_product(1000)) 
 
 
