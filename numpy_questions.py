@@ -41,9 +41,11 @@ def max_index(X):
     j = 0
 
     # TODO 
-    i=1
-    j=1
-
+    if shape(X) != 2 and type(X) != np.ndarray:
+        raise ValueError("The input is not a 2D-array")
+    else:
+        i = np.argmax(X)
+        j = np.argmax(X)
     return i, j
 
 
