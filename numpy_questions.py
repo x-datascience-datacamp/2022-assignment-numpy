@@ -37,11 +37,11 @@ def max_index(X):
         If the input is not a numpy array or
         if the shape is not 2D.
     """
-    if not isinstance(X,np.ndarray) or len(X.shape) !=2 :
+    if not isinstance(X,np.ndarray) or len(X.shape) !=2:
         raise ValueError('non relevant format')
     else:
-        i, j = np.unravel_index(X.argmax(), X.shape)
-        return i, j
+        i , j = np.unravel_index(X.argmax(), X.shape)
+        return i , j
 
 
 def wallis_product(n_terms):
