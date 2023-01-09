@@ -17,7 +17,6 @@ errors by calling `flake8` at the root of the repo.
 """
 import numpy as np
 
-
 def max_index(X):
     """Return the index of the maximum in a numpy array.
 
@@ -44,7 +43,6 @@ def max_index(X):
 
     if X is None or type(X) != np.ndarray or len(X.shape) != 2:
         raise ValueError
-
     indexes = np.unravel_index(np.argmax(X, axis=None), X.shape)
     i, j = indexes
 
@@ -73,5 +71,5 @@ def wallis_product(n_terms):
     pi = 2.
     for n in range(1, n_terms + 1):
         pi *= (4 * n**2) / (4 * n**2 - 1)
-    
+
     return pi
