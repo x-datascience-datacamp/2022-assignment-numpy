@@ -48,6 +48,7 @@ def max_index(X):
         i, j = np.unravel_index(np.argmax(X, axis=None), X.shape)
     return i, j
 
+
 def wallis_product(n_terms):
     """Implement the Wallis product to compute an approximation of pi.
 
@@ -72,6 +73,4 @@ def wallis_product(n_terms):
         s *= (2 * n / (2 * n - 1)) * (2 * n / (2 * n + 1))
     s = s * 2
     return s
-
-
 
