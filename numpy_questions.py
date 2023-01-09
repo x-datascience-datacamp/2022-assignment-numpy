@@ -41,8 +41,10 @@ def max_index(X):
     j = 0
 
     # TODO
+    if ( not(isinstance(X,np.ndarray)) or (len(X.shape)!=2) ):
+        raise ValueError
 
-    return i, j
+    return np.unravel_index(np.argmax(X, axis=None), X.shape)
 
 
 def wallis_product(n_terms):
