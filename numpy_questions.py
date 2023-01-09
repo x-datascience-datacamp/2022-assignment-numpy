@@ -69,4 +69,11 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    return 0.
+
+    product = 1
+    for i in range(1, n_terms + 1):
+        term = (2 * i) / (2 * i - 1) * (2 * i) / (2 * i + 1)
+        product *= term
+    return product * 2
+
+
