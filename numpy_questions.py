@@ -37,10 +37,17 @@ def max_index(X):
         If the input is not a numpy array or
         if the shape is not 2D.
     """
-    i = 0
-    j = 0
-
+    
     # TODO
+
+    if not isinstance(X, np.ndarray):
+        raise ValueError("X must be a numpy array")
+    if X.ndim != 2:
+        raise ValueError("X must be a 2D array")
+
+    max_val = np.max(X)
+    k,l = np.where(X == max_val)
+    i, j = i[0], j[0]
 
     return i, j
 
