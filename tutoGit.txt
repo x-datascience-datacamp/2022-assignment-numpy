@@ -1,0 +1,21 @@
+Apprendre git
+
+git + url
+
+git status # pour voir le dossier ou nous nous trouvons
+
+git diff#
+
+git commit# " pour commenter"
+
+git add # pour envoyer un fichier
+
+git checkout # to create the new branch
+
+git remote 
+
+git push to 
+
+git pull 
+
+my modification in text
