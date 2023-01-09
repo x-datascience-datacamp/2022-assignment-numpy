@@ -41,8 +41,8 @@ def max_index(X):
     j = 0
 
     # TODO
-    i = 1
-    return i, j
+    i,j = np.where(X == np.max(X))
+    return i[0], j[0]
 
 
 def wallis_product(n_terms):
@@ -65,3 +65,6 @@ def wallis_product(n_terms):
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
     return 0.
+
+
+
