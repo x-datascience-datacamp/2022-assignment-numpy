@@ -44,9 +44,9 @@ def max_index(X):
     try:
         x = np.argmax(X)
         i = x // X.shape[0]
-        j = x % X.shape[0]
+        j = x % X.shape[1]
         assert X.ndim == 2
-    except Exception as e:
+    except Exception:
         raise ValueError
     return i, j
 
