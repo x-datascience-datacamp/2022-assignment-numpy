@@ -16,7 +16,7 @@ This will be enforced with `flake8`. You can check that there is no flake8
 errors by calling `flake8` at the root of the repo.
 """
 import numpy as np
-
+import functools
 
 def max_index(X):
     """Return the index of the maximum in a numpy array.
@@ -46,9 +46,8 @@ def max_index(X):
     else:
         i, j = np.unravel_index(X.argmax(), X.shape)
         return i, j
-    #return i, j
 
-import functools
+
 
 def wallis_product(n_terms):
     """Implement the Wallis product to compute an approximation of pi.
