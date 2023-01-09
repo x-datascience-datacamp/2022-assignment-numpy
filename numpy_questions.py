@@ -85,6 +85,9 @@ def max_index(X):
             i = Indicies[0]
             j = Indicies[1]
 
+            """Or we could have used
+            i, j-p.unravel_index(np.argmax(X, axis = None), X. shape)"""
+
         else:
             raise ValueError("Numpy Array is not of dimension 2D")
 
