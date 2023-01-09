@@ -39,8 +39,14 @@ def max_index(X):
     """
     i = 0
     j = 0
-
     # TODO
+    val = X[0][0]
+    for s in range(len(X)):
+        for l in range(len(X[0])): 
+            if X[s][l] > val :
+                i = s
+                j = l
+                val = X[s][l]
 
     return i, j
 
