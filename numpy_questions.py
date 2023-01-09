@@ -40,7 +40,7 @@ def max_index(X):
     i = 0
     j = 0
 
-    if type(X).__module__ == np.__name__ and len(X.shape)>1:
+    if type(X).__module__ == np.__name__ and len(X.shape)==2 and X is not None:
         
         i, j = np.unravel_index(X.argmax(), X.shape)
         
