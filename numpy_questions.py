@@ -39,8 +39,16 @@ def max_index(X):
     """
     i = 0
     j = 0
-
-    # TODO
+    
+    if type(X).__module != np.__name__:
+        print("X must be a numpy array")
+        return
+    if len(X.shape) != 2:
+        print("X must be a 2D array")
+        return
+    
+    i, j = np.unravel_index(X.argmax(), X.shape)
+    
 
     return i, j
 
