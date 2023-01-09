@@ -75,12 +75,12 @@ def wallis_product(n_terms):
     if n_terms == 0:
         return 2
 
-    # numbers_to_be_multiplied = np.arange(1, n_terms+1)
-    # values = 4*numbers_to_be_multiplied**2/(4*numbers_to_be_multiplied**2-1)
-    # pi_estimated = values.cumprod()[-1]
+    numbers_to_be_multiplied = np.arange(1, n_terms+1,dtype=np.int64)
+    values = 4*numbers_to_be_multiplied**2/(4*numbers_to_be_multiplied**2-1)
+    pi_estimated = values.cumprod()[-1]
 
-    pi_estimated = 1
-    for j in range(1, n_terms + 1):
-        pi_estimated *= 4 * j**2 / (4 * j**2 - 1)
+    # pi_estimated = 1
+    # for j in range(1, n_terms + 1):
+    #     pi_estimated *= 4 * j**2 / (4 * j**2 - 1)
     pi_estimated *= 2
     return pi_estimated
