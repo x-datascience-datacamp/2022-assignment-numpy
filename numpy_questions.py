@@ -68,8 +68,8 @@ def wallis_product(n_terms):
         return 2
     else:
         output = 1
-        for i in range (1, n_terms+1):
-            output =  output * (4.0*(i**2))/(4.0*(i**2)-1) 
+        for i in range (1,n_terms+1):
+            output =  output*(4.0*(i**2))/(4.0*(i**2)-1) 
         return 2*output
 
 
