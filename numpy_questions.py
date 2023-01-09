@@ -51,17 +51,20 @@ def max_index(X):
             Max = X[i][j]
 
             """Save the indicies in a 1D array"""
-            Indicies=[i, j]
+            Indicies = [i, j]
 
-            """"Find the index value of the maximum in each column which means finding the row"""
+            """"Find the index value of the maximum in each
+            column which means finding the row"""
             Columns = np.argmax(X, axis=0)
             print(Columns)
 
-            """"Find the index value of the maximum in each row which means finding the column"""
+            """"Find the index value of the maximum in each
+            row which means finding the column"""
             Rows = np.argmax(X, axis=1)
             print(Rows)
 
-            """Ititrate over the columns of each row to change the maximum if we have a new bigger value"""
+            """Ititrate over the columns of each row to change
+            the maximum if we have a new bigger value"""
             if len(Columns) >= len(Rows):
                 for v in Rows:
                     for w in Columns:
@@ -69,9 +72,9 @@ def max_index(X):
                             Indicies[0] = w
                             Indicies[1] = v
                             Max = X[w][v]
-        
 
-            """Ititrate over the rows of each column to change the maximum if we have a new bigger value"""
+            """Ititrate over the rows of each column to change
+            the maximum if we have a new bigger value"""
             if len(Rows) > len(Columns):
                 for v in Columns:
                     for w in Rows:
@@ -79,7 +82,6 @@ def max_index(X):
                             Indicies[0] = v
                             Indicies[1] = w
                             Max = X[v][w]
-            
             i = Indicies[0]
             j = Indicies[1]
 
@@ -118,10 +120,10 @@ def wallis_product(n_terms):
         return products*2
     else:
         multiplier = 2
-        for n_terms in range (n_terms):
+        for n_terms in range(n_terms):
             pterm = multiplier/(multiplier-1)
             nterm = multiplier/(multiplier+1)
-            products = products*pterm*nterm 
-            multiplier = multiplier + 2 
+            products = products*pterm*nterm
+            multiplier = multiplier + 2
         return products*2
-    return 0.
+    return 0
