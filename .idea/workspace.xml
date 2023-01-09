@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe9e8770-68b2-43bb-bddb-ce74508893af" name="Changes" comment="" />
+    <list default="true" id="fe9e8770-68b2-43bb-bddb-ce74508893af" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/2022-assignment-numpy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2022-assignment-numpy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numpy_questions.py" beforeDir="false" afterPath="$PROJECT_DIR$/numpy_questions.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,5 +37,16 @@
       <updated>1673267798794</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
