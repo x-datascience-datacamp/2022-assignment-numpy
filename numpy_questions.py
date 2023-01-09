@@ -39,6 +39,8 @@ def max_index(X):
     """
     i = 0
     j = 0
+    modif = 8
+    
 
     # TODO
 
