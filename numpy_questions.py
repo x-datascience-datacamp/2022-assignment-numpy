@@ -69,9 +69,11 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    res = 1
-    for i in range(1, n_terms):
-        print(i)
-        res = res * (4 * (i**2)) / (4 * i**2 - 1)
 
+    if n_terms < 0:
+        raise ValueError("n_terms should be a positive integer")
+
+    res = 1
+    for i in range(1, n_terms + 1):
+        res = res * (4 * (i**2)) / (4 * i**2 - 1)
     return res * 2
