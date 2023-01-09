@@ -41,8 +41,8 @@ def max_index(X):
     j = 0
 
     # TODO
-    i = np.argmax(np.max(X, axis=0), axis=1)
-    j = np.argmax(np.max(X, axis=1), axis=0)
+    i = np.argmax(np.max(X, axis=1))
+    j = np.argmax(np.max(X, axis=0))
 
     return i, j
 
