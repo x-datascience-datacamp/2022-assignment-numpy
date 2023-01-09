@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "2022-assignment-numpy"
+version = "0.1.0"
+description = ""
+authors = ["Thomas Boyer <thomas.boyer@ensta-paris.fr>"]
+readme = "README.md"
+packages = [{include = "2022_assignment_numpy"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+scikit-learn = "^1.2.0"
+scipy = "^1.10.0"
+pandas = "^1.5.2"
+numpy = "^1.24.1"
+pytest = "^7.2.0"
+flake8 = "^6.0.0"
+black = "^22.12.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
