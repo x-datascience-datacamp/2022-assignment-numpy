@@ -37,15 +37,10 @@ def max_index(X):
         If the input is not a numpy array or
         if the shape is not 2D.
     """
-    try:
-        type(X) == np.ndarray
-    except:
-        raise ValueError("The input must be a numpy array")
-
-    try:
-        X.ndim == 2
-    except:
-        raise ValueError("The input must be a 2D np.array")
+    if type(X) != np.ndarray:
+        raise ValueError('Input is not a numpy array')
+    if X.ndim != 2:
+        raise ValueError('Shape is not 2D')
     i = 0
     j = 0
 
