@@ -82,5 +82,6 @@ def wallis_product(n_terms):
     # pi_estimated = 1
     # for j in range(1, n_terms + 1):
     #     pi_estimated *= 4 * j**2 / (4 * j**2 - 1)
+    
     pi_estimated *= 2
     return pi_estimated
