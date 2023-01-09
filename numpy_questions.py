@@ -41,7 +41,6 @@ def max_index(X):
     j = 0
 
     # TODO
-    #test github
     if not isinstance(X, np.ndarray):
         raise ValueError
     if X.ndim != 2:
