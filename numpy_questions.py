@@ -44,7 +44,7 @@ def max_index(X):
         (i, j) = np.unravel_index(np.argmax(X, axis=None), X.shape)
         return i, j
     else:
-        raise(ValueError)
+        raise ValueError
 
 
 def wallis_product(n_terms):
