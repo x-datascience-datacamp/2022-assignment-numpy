@@ -47,10 +47,10 @@ def max_index(X):
     # TODO
     dim = X.shape
     for k in range(dim[0]):
-        for l in range(dim[1]):
-            if (X[i][j] < X[k][l]):
+        for m in range(dim[1]):
+            if (X[i][j] < X[k][m]):
                 i = k
-                j = l
+                j = m
     return i, j
 
 
