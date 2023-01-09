@@ -62,7 +62,7 @@ def wallis_product(n_terms):
         consider the product to be `1`.
 
     Returns
-    -------
+    ------
     pi : float
         The approximation of order `n_terms` of pi using the Wallis product.
     """
