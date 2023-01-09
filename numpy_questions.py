@@ -39,6 +39,8 @@ def max_index(X):
 
 
     # TODO
+    if (type(X) is not np.ndarray) or (len(X.shape)!=2):
+        raise(ValueError)
     L=[]
     index=[]
     for ik in range(len(X)):
@@ -47,10 +49,10 @@ def max_index(X):
     j=np.argmax(L)
     i=index[j]
         
-    return i, j
+    return j,i
 
 
-print(max_index(np.array([[1,2,3],[1,2,3]])))
+
 def wallis_product(n_terms):
     """Implement the Wallis product to compute an approximation of pi.
 
@@ -70,4 +72,9 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    return 0.
+    pi=2
+    if n_terms==0:
+        return pi
+    for i in range(1,n_terms+1):
+        pi*=  (4*(i**2))/((4*(i**2))-1)
+    return pi
