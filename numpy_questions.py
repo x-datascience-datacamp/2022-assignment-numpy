@@ -1,3 +1,6 @@
+"Author : Fofana Ladji Idrissa"
+
+
 """Assignment - using numpy and making a PR.
 
 The goals of this assignment are:
