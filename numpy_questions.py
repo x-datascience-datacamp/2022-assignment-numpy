@@ -23,7 +23,7 @@ def max_index(X):
 
     Parameters
     ----------
-    X : ndarray of shape (n_samples, n_samples)
+    X : ndarray of shape (n_samples, n_features)
         The input array.
 
     Returns
