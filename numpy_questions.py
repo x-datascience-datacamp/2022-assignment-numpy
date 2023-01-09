@@ -89,5 +89,5 @@ def wallis_product(n_terms):
         total = left*right
         pi *= total
     pi *= 2
-    
+
     return pi
