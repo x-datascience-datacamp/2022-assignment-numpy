@@ -72,7 +72,9 @@ def wallis_product(n_terms):
 
     product = 2.
 
-    for i in range(1, n_terms + 1):
-        product *= (4/i**2)/(4*i**2 - 1)
+    for n in range(1, n_terms + 1):
+        pair_term = 2*n/(2*n + 1)
+        odd_term = 2*n/(2*n - 1)
+        product *= pair_term*odd_term
 
     return product
