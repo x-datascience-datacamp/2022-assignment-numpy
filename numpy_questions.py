@@ -41,7 +41,7 @@ def max_index(X):
     j = 0
     # TODO
     if (type(X) is not np.ndarray) or (len(X.shape) != 2):
-        raise(ValueError)
+        raise ValueError()
     L = []
     index = []
     for ik in range(len(X)):
