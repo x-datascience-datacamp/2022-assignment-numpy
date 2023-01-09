@@ -41,11 +41,14 @@ def max_index(X):
     j = 0
 
     # TODO
-    if type(X) != np.ndarray or len(X.shape) != 2:
+    if type(X) == np.ndarray:
+        if len(X.shape) != 2:
+            raise ValueError
+        else:
+            i, j = np.unravel_index(np.argmax(X, axis=None), X.shape)
+
+    else:
         raise ValueError
-
-    i, j = np.unravel_index(np.argmax(X, axis=None), X.shape)
-
     return i, j
 
 
