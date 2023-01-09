@@ -9,6 +9,7 @@ import pytest
 
 from numpy_questions import wallis_product, max_index
 
+print(1)
 
 def test_max_index():
     X = np.array([[0, 1], [2, 0]])
