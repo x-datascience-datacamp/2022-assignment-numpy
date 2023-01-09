@@ -73,4 +73,3 @@ def wallis_product(n_terms):
         s *= (2 * n / (2 * n - 1)) * (2 * n / (2 * n + 1))
     s = s * 2
     return s
-
