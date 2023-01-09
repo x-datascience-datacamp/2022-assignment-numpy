@@ -41,6 +41,53 @@ def max_index(X):
     j = 0
 
     # TODO
+    """Check if array is of type numpy"""
+    if isinstance(X, np.ndarray):
+
+        """"Check if numpy array is 2D dimension"""
+        if X.ndim == 2:
+
+            """Initialize the maximum to the first value"""
+            Max = X[i][j]
+
+            """Save the indicies in a 1D array"""
+            Indicies=[i, j]
+
+            """"Find the index value of the maximum in each column which means finding the row"""
+            Columns = np.argmax(X, axis=0)
+            print(Columns)
+
+            """"Find the index value of the maximum in each row which means finding the column"""
+            Rows = np.argmax(X, axis=1)
+            print(Rows)
+
+            """Ititrate over the columns of each row to change the maximum if we have a new bigger value"""
+            if len(Columns) >= len(Rows):
+                for v in Rows:
+                    for w in Columns:
+                        if X[w][v] > Max:
+                            Indicies[0] = w
+                            Indicies[1] = v
+                            Max = X[w][v]
+        
+
+            """Ititrate over the rows of each column to change the maximum if we have a new bigger value"""
+            if len(Rows) > len(Columns):
+                for v in Columns:
+                    for w in Rows:
+                        if X[v][w] > Max:
+                            Indicies[0] = v
+                            Indicies[1] = w
+                            Max = X[v][w]
+            
+            i = Indicies[0]
+            j = Indicies[1]
+
+        else:
+            raise ValueError("Numpy Array is not of dimension 2D")
+
+    else:
+        raise ValueError("Array is not of type Numpy")
 
     return i, j
 
@@ -64,4 +111,17 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
+
+    products = 1
+
+    if n_terms == 0:
+        return products*2
+    else:
+        multiplier = 2
+        for n_terms in range (n_terms):
+            pterm = multiplier/(multiplier-1)
+            nterm = multiplier/(multiplier+1)
+            products = products*pterm*nterm 
+            multiplier = multiplier + 2 
+        return products*2
     return 0.
