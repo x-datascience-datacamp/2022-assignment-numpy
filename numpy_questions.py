@@ -68,6 +68,11 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    essai = 2
-    i = 0
-    return 0.
+    if n_terms == 0: 
+        return 1
+    else:
+        pi = np.arange(1,n_terms+1)
+        pi2 = pi * 2
+        pi = np.prod(pi2/(pi2 - 1) * pi2/(pi2 + 1))
+   
+    return pi*2
