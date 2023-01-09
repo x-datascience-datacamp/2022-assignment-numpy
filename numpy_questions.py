@@ -70,7 +70,9 @@ def wallis_product(n_terms):
     # Check if type is int
     if not isinstance(n_terms, int):
         raise ValueError("n_terms should be an integer.")
-    # Implement the Wallis Product
-    pi = (float(2 * np.prod([((2 * i) / (2 * i - 1)) * ((2 * i) / (2 * i + 1))
-                             for i in range(1, n_terms + 1)])))
-    return pi
+    if n_terms == 0:
+        return 2.
+    # Implement the Wallis Product without for loops
+    terms_range = np.arange(1, n_terms + 1)
+    pi = 2 * np.prod(4 * terms_range ** 2 / (4 * terms_range ** 2 - 1))
+    return float(pi)
