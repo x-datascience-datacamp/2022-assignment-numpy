@@ -44,7 +44,9 @@ def max_index(X):
     if len(X.shape)!= 2:
         raise ValueError
     # TODO
+
     i,j = np.where(X==np.max(X))
+    
     i,j = int(i), int(j)
     return i, j
 
