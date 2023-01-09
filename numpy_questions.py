@@ -41,8 +41,9 @@ def max_index(X):
     j = 0
 
     # TODO
-    X = np.asarray(X)
-    max = 0
+    if type(X) is not np.ndarray or X.ndim < 2 :
+        raise ValueError
+    max = X[0,0]
     n,m = X.shape
     for a in range(n):
         for b in range(m):
@@ -67,7 +68,7 @@ def wallis_product(n_terms):
 
     Returns
     -------
-    pi : float
+    pi : float 
         The approximation of order `n_terms` of pi using the Wallis product.
     """
     # XXX : The n_terms is an int that corresponds to the number of
