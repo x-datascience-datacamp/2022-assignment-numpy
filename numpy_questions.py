@@ -74,7 +74,7 @@ def wallis_product(n_terms):
 
     prod = 1
 
-    for n in range(1,n_terms+1):
+    for n in range(1, n_terms+1):
         four_n_square = 4 * n**2
         prod *= four_n_square/(four_n_square - 1)
 
