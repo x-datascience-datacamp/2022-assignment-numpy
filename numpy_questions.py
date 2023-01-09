@@ -43,6 +43,7 @@ def max_index(X):
     # TODO
     if type(X) is not np.ndarray:
         raise ValueError('The input is not a numpy array')
+
     i, j = np.unravel_index(np.argmax(X, axis=None), X.shape)
     
     return i, j
