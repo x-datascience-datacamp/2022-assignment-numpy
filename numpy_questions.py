@@ -40,11 +40,6 @@ def max_index(X):
     # i = 0
     # j = 0
 
-    # TODO  
-    if X is None:
-        print('Mauvais format pour X, doit être un array numpy')
-        raise pytest.raises(ValueError)
-
     # TODO
     if not isinstance(X, np.ndarray) or len(X.shape) != 2:
         raise ValueError
