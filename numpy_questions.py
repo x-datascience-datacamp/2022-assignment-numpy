@@ -41,7 +41,7 @@ def max_index(X):
     j = 0
 
     # TODO
-    i = 4
+    i = 'totalynew'
     return i, j
 
 
