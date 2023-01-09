@@ -47,8 +47,8 @@ def max_index(X):
         raise ValueError("X must be a 2D array")
 
     max_val = np.max(X)
-    k,l= np.where(X==max_val)
-    i, j = k[0], l[0]
+    k, h = np.where(X == max_val)
+    i, j = k[0], h[0]
 
     return i, j
 
