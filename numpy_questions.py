@@ -45,7 +45,7 @@ def max_index(X):
 
         m = np.argmax(X)
         i, j = m // X.shape[1], m % X.shape[1]
-    else :
+    else:
         raise ValueError("The input is not a numpy array")
 
     if len(X.shape) != 2:
