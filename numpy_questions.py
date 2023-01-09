@@ -46,14 +46,10 @@ def max_index(X):
     if X.ndim != 2:
         raise ValueError("X must be a 2D array")
 
-    max=0
-    k, l = 0,0
-    for k in range(n_samples):
-        for l in range(n_features):
-            if X[k][l]>max : 
-                max = X[k][l]
-                i=k
-                j=l
+    max_val = np.max(X)
+    k,l= np.where(X==max_val)
+    i, j = k[0], l[0]
+
     return i, j
 
 
