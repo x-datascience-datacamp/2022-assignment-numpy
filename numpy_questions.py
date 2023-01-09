@@ -39,8 +39,8 @@ def max_index(X):
     """
 
     # TODO
-    if isinstance(X, np.ndarray) is False:
-        raise TypeError('Work with Numpy Array Only')
+    if not isinstance(X, np.ndarray):
+        raise ValueError('Work with Numpy Array Only')
     if X.ndim != 2:
         raise ValueError('2D Numpy Array Only')
 
