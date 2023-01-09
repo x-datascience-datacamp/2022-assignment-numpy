@@ -41,7 +41,7 @@ def max_index(X):
     j = 0
 
     # TODO
-
+    # ahla wa sahla w yaatikom aasba
     return i, j
 
 
