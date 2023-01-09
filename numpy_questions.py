@@ -71,4 +71,13 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
+
+    if n_terms == 0:
+        return 2
+
+    numbers_multiplied = np.arange(1, n_terms + 1, dtype=np.int64)
+    values = 4 * numbers_multiplied**2 / (4 * numbers_multiplied**2 - 1)
+    pi_estimated = values.cumprod()[-1]
+    
+    pi_estimated *= 2
     return 0.
