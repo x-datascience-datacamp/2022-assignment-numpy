@@ -39,6 +39,7 @@ def max_index(X):
     """
     i = 0
     j = 0
+    #"a"
 
     # TODO
     try : 
@@ -49,6 +50,7 @@ def max_index(X):
                 if X[x, y] > X[i, j] : 
                     i, j = x, y 
             x += 1
+        return(i, j)
     except :
         return("ValueError")
 
