@@ -39,12 +39,12 @@ def max_index(X):
     """
     i = 0
     j = 0
-    if type(X) !=np.ndarray:
+    if type(X) != np.ndarray:
         raise ValueError()
     if X.ndim != 2:
         raise ValueError()
 
-    [i,j] = np.where(X==np.max(X))
+    [i, j] = np.where(X == np.max(X))
 
     return i, j
 
@@ -71,7 +71,7 @@ def wallis_product(n_terms):
     pi = 1
     if n_terms == 0:
         return 2
-    for n in range(1,n_terms+1):
+    for n in range(1, n_terms+1):
         pi = pi * 4*n*n/(4*n*n-1)
     pi = pi*2
 
