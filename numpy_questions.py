@@ -15,7 +15,9 @@ We also ask to respect the pep8 convention: https://pep8.org.
 This will be enforced with `flake8`. You can check that there is no flake8
 errors by calling `flake8` at the root of the repo.
 """
+
 import numpy as np
+import pytest
 
 
 def max_index(X):
@@ -41,9 +43,22 @@ def max_index(X):
     j = 0
 
     # TODO
-
-    return i, j
-
+    print(X)
+    if type(X) != np.ndarray:
+        pytest.raises(ValueError)
+    if len(X.shape!=2) : 
+        pytest.raises(ValueError)
+    maximum = X[i][j]
+    n_samples, n_features = X.shape
+    for k in range(n_samples) : 
+        for l in range(n_features) : 
+            if(X[k][l] > maximum) : 
+                maximum = X[k][l]
+                i,j=k,l
+    
+    return i,j 
+print(type(np.array([[0, 1], [2, 0]])))
+print(max_index(None))
 
 def wallis_product(n_terms):
     """Implement the Wallis product to compute an approximation of pi.
