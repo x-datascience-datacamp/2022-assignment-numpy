@@ -46,7 +46,7 @@ def max_index(X):
 
     i, j = np.unravel_index(np.argmax(X, axis = None), X.shape)
 
-    return i,j
+    return i, j
 
 
 def wallis_product(n_terms):
@@ -71,8 +71,6 @@ def wallis_product(n_terms):
 
     n = np.arange(1, n_terms+1)
 
-    pi = np.prod(4*(n**2)/(4*(n**2) -1)) * 2
+    pi = np.prod(4 * (n**2) / (4 * (n**2) - 1)) * 2
 
     return pi
-
-
