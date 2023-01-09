@@ -15,9 +15,7 @@ We also ask to respect the pep8 convention: https://pep8.org.
 This will be enforced with `flake8`. You can check that there is no flake8
 errors by calling `flake8` at the root of the repo.
 """
-
 import numpy as np
-import pytest
 
 
 def max_index(X):
@@ -41,23 +39,19 @@ def max_index(X):
     """
     i = 0
     j = 0
-
     # TODO
-    
     if type(X) != np.ndarray:
         raise(ValueError)
-    if len(X.shape) != 2: 
+    if len(X.shape) != 2:
         raise(ValueError)
-    maximum = X[i][j]
-    n_samples, n_features = X.shape
-    for k in range(n_samples) : 
-        for l in range(n_features) : 
-            if(X[k][l] > maximum) : 
-                maximum = X[k][l]
-                i,j=k,l
-    
-    return i,j 
-
+    val = X[0][0]
+    for s in range(len(X)):
+        for k in range(len(X[0])):
+            if X[s][k] > val:
+                i = s
+                j = k
+                val = X[s][k]
+    return i, j
 
 
 def wallis_product(n_terms):
@@ -79,12 +73,9 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    if(n_terms==0) :
-        wallis=2
-    else : 
-        wallis = 2
-        for i in range(1,n_terms+1) : 
-            wallis = wallis* (4*i**2/(4*i**2 -1))
-    return wallis
-    
-print(wallis_product(1))
+    res = 2
+    if n_terms == 0:
+        return res
+    for n in range(1, n_terms+1):
+        res = (4(n*2))/(4(n**2) - 1)
+    return res
