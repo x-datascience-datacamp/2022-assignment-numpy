@@ -46,8 +46,8 @@ def max_index(X):
         raise ValueError("X must be a 2D array")
 
     max_val = np.max(X)
-    k,l = np.where(X == max_val)
-    i, j = k[0], l[0]
+    k, h = np.where(X == max_val)
+    i, j = k[0], h[0]
 
     return i, j
 
@@ -75,5 +75,4 @@ def wallis_product(n_terms):
     pi = 1
     for i in range(1, n_terms + 1):
         pi *= (2 * i) / (2 * i - 1) * (2 * i) / (2 * i + 1)
-    return pi* 2
-  
+    return pi * 2
