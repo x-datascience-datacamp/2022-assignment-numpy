@@ -35,7 +35,8 @@ def max_index(X):
     ------
     ValueError
         If the input is not a numpy array or
-        if the shape is not 2D."""
+        if the shape is not 2D.
+    """
     if not isinstance(X, np.ndarray):
         raise ValueError
 
@@ -50,9 +51,6 @@ def max_index(X):
                 maxi = X[rows][columns]
                 i = rows
                 j = columns
-
-    # TODO
-
     return i, j
 
 
