@@ -46,6 +46,7 @@ def max_index(X):
 
 
 def wallis_product(n_terms):
+    print("hey")
     """Implement the Wallis product to compute an approximation of pi.
 
     See:
