@@ -40,8 +40,13 @@ def max_index(X):
     i = 0
     j = 0
 
-    # TODO
-    i = 1
+    if X is not numpy.ndarray:
+        raise TypeError('Work with numpy array Only')
+
+    if len(X.shape) != 2:
+        raise TypeError('Work with 2DS numpy array Only')
+
+    i, j = np.argmax(X)
 
     return i, j
 
