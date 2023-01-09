@@ -41,7 +41,19 @@ def max_index(X):
     j = 0
 
     # TODO
+    if not isinstance(X, np.ndarray):
+        raise ValueError("X must be a numpy array")
+    if X.ndim != 2:
+        raise ValueError("X must be a 2D array")
 
+    max=0
+    k, l = 0,0
+    for k in range(n_samples):
+        for l in range(n_features):
+            if X[k][l]>max : 
+                max = X[k][l]
+                i=k
+                j=l
     return i, j
 
 
