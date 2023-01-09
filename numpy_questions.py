@@ -43,11 +43,11 @@ def max_index(X):
     j = 0
 
     # TODO
-    print(X)
+    
     if type(X) != np.ndarray:
-        pytest.raises(ValueError)
-    if len(X.shape!=2) : 
-        pytest.raises(ValueError)
+        raise(ValueError)
+    if len(X.shape) != 2: 
+        raise(ValueError)
     maximum = X[i][j]
     n_samples, n_features = X.shape
     for k in range(n_samples) : 
@@ -57,8 +57,8 @@ def max_index(X):
                 i,j=k,l
     
     return i,j 
-print(type(np.array([[0, 1], [2, 0]])))
-print(max_index(None))
+
+
 
 def wallis_product(n_terms):
     """Implement the Wallis product to compute an approximation of pi.
@@ -79,4 +79,11 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    return 0.
+    if(n_terms==0) :
+        wallis=2
+    else : 
+        wallis = 2
+        for i in range(1,n_terms+1) : 
+            wallis = wallis* (4*i**2/(4*i**2 -1))
+    return wallis
+print(wallis_product(1))
