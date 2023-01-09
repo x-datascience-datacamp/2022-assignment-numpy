@@ -27,6 +27,7 @@ def test_max_index():
     with pytest.raises(ValueError):
         max_index(np.array([0, 1]))
 
+
 def test_wallis_product():
     pi_approx = wallis_product(0)
     assert pi_approx == 2.
@@ -36,4 +37,3 @@ def test_wallis_product():
 
     pi_approx = wallis_product(100000)
     assert abs(pi_approx - m.pi) < 1e-4
-

@@ -41,9 +41,9 @@ def max_index(X):
     j = 0
 
     # TODO
-    if type(X) is not np.ndarray :
+    if (type(X) is not np.ndarray):
         raise ValueError
-    i,j = np.where(X == np.max(X))
+    i, j = np.where(X == np.max(X))
     return i[0], j[0]
 
 
@@ -67,10 +67,7 @@ def wallis_product(n_terms):
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
     s = 1
-    for i in range(1 ,n_terms+1):
-        s*= (4*i**2)/(4*i**2 - 1)
+    for i in range(1,n_terms+1):
+        s*=(4*i**2)/(4*i**2-1)
 
     return 2*s
-
-
-
