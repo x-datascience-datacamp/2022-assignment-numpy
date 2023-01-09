@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def max_index(X):
     """Return the index of the maximum in a numpy array.
 
@@ -34,6 +35,7 @@ def max_index(X):
 
     return max_ind
 
+
 def wallis_product(n_terms):
     """Implement the Wallis product to compute an approximation of pi.
 
@@ -54,7 +56,7 @@ def wallis_product(n_terms):
     if n_terms < 0:
         raise ValueError("n_terms must be a non-negative integer.")
     elif n_terms == 0:
-        return 1.
+        return 2.
 
     pi = 1.
     for i in range(1, n_terms+1):
