@@ -40,7 +40,7 @@ def max_index(X):
     i = 0
     j = 0
 
-    i=1.2
+    i=1.3
     # TODO
 
     return i, j
