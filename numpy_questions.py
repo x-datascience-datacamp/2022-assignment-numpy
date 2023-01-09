@@ -46,13 +46,17 @@ def max_index(X):
     j = 0
 
     # TODO
+    # Initialize variable for maximum value to the value of the element at the first row and first column
     max_value = X[0, 0]
+    # Loop through rows and columns of the array
     for k in range(X.shape[0]):
         for l in range(X.shape[1]):
+            # Update row, column, and maximum value if current element is greater than the current maximum value
             if X[k, l] > max_value:
                 i = k
                 j = l
-                max_value = X[k, l]          
+                max_value = X[k, l]     
+    # Return row and column indices of the maximum element in X     
     return i, j
 
 
