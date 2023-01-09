@@ -46,7 +46,6 @@ def max_index(X):
     
     i, j = np.unravel_index(X.argmax(), X.shape)
     
-    return i, j
 
     return i, j
 
