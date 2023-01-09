@@ -42,6 +42,13 @@ def max_index(X):
 
     # TODO
 
+    if not isinstance(X, np.ndarray) or X.ndim != 2:
+        raise ValueError
+    
+
+    i,j = np.unravel_index(np.argmax(X, axis=None), X.shape)
+
+
     return i, j
 
 
