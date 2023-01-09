@@ -41,16 +41,19 @@ def max_index(X):
     # TODO
     x, y = 0, 0
     try : 
-        while x < X.shape[0] : 
-            y = 0
-            while y < X.shape[1] : 
-                y += 1
-                if X[x, y] > X[i, j] : 
-                    i, j = x, y 
-            x += 1
-        return(i, j)
-    except :
-        return("ValueError")
+        if len(X.shape) == 2 : 
+            while x < X.shape[0] : 
+                y = 0
+                while y < X.shape[1] : 
+                    if X[x, y] > X[i, j] : 
+                        i, j = x, y 
+                    y += 1
+                x += 1
+            return(i, j)
+        else :
+            raise ValueError
+    except : 
+        raise ValueError
 
 
 
@@ -74,7 +77,7 @@ def wallis_product(n_terms):
     # The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
     pi = 1 
-    for n in range(1, n_terms) : 
+    for n in range(1, n_terms+1) : 
         pi = pi*((4*(n**2))/(4*(n**2) - 1))
 
     return 2*pi
