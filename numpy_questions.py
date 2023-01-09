@@ -16,7 +16,6 @@ import numpy as np
 
 
 def max_index(X):
-
     """Return the index of the maximum in a numpy array.
     Parameters
     ----------
@@ -34,7 +33,6 @@ def max_index(X):
     """
     i = 0
     j = 0
-
     # TODO
     if type(X) != np.ndarray:
         raise ValueError
@@ -50,7 +48,6 @@ def max_index(X):
 
 
 def wallis_product(n_terms):
-
     """Implement the Wallis product to compute an approximation of pi.
     See:
     https://en.wikipedia.org/wiki/Wallis_product
@@ -66,7 +63,6 @@ def wallis_product(n_terms):
     pi : float
         The approximation of order `n_terms` of pi using the Wallis product.
     """
-
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
     step = np.arange(1, n_terms + 1, dtype="float")
