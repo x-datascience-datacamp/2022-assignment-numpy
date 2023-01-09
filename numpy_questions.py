@@ -46,48 +46,7 @@ def max_index(X):
 
         """"Check if numpy array is 2D dimension"""
         if X.ndim == 2:
-
-            """Initialize the maximum to the first value"""
-            Max = X[i][j]
-
-            """Save the indicies in a 1D array"""
-            Indicies = [i, j]
-
-            """"Find the index value of the maximum in each
-            column which means finding the row"""
-            Columns = np.argmax(X, axis=0)
-            print(Columns)
-
-            """"Find the index value of the maximum in each
-            row which means finding the column"""
-            Rows = np.argmax(X, axis=1)
-            print(Rows)
-
-            """Ititrate over the columns of each row to change
-            the maximum if we have a new bigger value"""
-            if len(Columns) >= len(Rows):
-                for v in Rows:
-                    for w in Columns:
-                        if X[w][v] > Max:
-                            Indicies[0] = w
-                            Indicies[1] = v
-                            Max = X[w][v]
-
-            """Ititrate over the rows of each column to change
-            the maximum if we have a new bigger value"""
-            if len(Rows) > len(Columns):
-                for v in Columns:
-                    for w in Rows:
-                        if X[v][w] > Max:
-                            Indicies[0] = v
-                            Indicies[1] = w
-                            Max = X[v][w]
-            i = Indicies[0]
-            j = Indicies[1]
-
-            """Or we could have used
-            i, j-p.unravel_index(np.argmax(X, axis = None), X. shape)"""
-
+            i, j = np.unravel_index(np.argmax(X, axis=None), X. shape)
         else:
             raise ValueError("Numpy Array is not of dimension 2D")
 
