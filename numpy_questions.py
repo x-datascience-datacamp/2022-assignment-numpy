@@ -40,7 +40,15 @@ def max_index(X):
     i = 0
     j = 0
 
-    # TODO
+    M=0
+    shape=X.shape
+    for a in range(shape[0]):
+        for b in range(shape[1]):
+            if X[a][b]>M:
+                M=X[a][b]
+                i=a
+                j=b
+
 
     return i, j
 
