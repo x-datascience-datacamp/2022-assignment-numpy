@@ -37,12 +37,23 @@ def max_index(X):
         If the input is not a numpy array or
         if the shape is not 2D.
     """
-    i = 0
-    j = 0
-
-    # TODO
-
+    if not isinstance(X, np.ndarray):
+        return ValueError("No array")
+    elif len(X.shape)!=2:
+        return ValueError("Not good shape "+ str(len(X.shape)))
+    else :
+        i=0
+        j=0
+        maxi=X[i,j]
+        for x in range(X.shape[0]):
+            for y in range(X.shape[1]):
+                if X[i,j]>=maxi:
+                    i=x
+                    j=y
+                    maxi=X[i,j]
     return i, j
+
+
 
 
 def wallis_product(n_terms):
