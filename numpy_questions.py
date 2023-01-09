@@ -46,7 +46,7 @@ def max_index(X):
 
         """"Check if numpy array is 2D dimension"""
         if X.ndim == 2:
-            i, j = np.unravel_index(np.argmax(X, axis=None),X.shape)
+            i, j = np.unravel_index(np.argmax(X, axis=None), X.shape)
         else:
             raise ValueError("Numpy Array is not of dimension 2D")
 
