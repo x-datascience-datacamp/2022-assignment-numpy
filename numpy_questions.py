@@ -66,7 +66,7 @@ def wallis_product(n_terms):
     if n_terms == 0:
         return 2
     if n_terms == 1:
-        return 8/3
+        return 8 / 3
     else:
         f = 1
         for i in range(1, n_terms):
