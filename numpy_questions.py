@@ -70,10 +70,10 @@ def wallis_product(n_terms):
 
     # Generate an array of integers from 1 to n_terms
     i = np.arange(1, n_terms + 1)
-    
+
     # Wallis product
     terms = (2 * i) / (2 * i - 1) * (2 * i) / (2 * i + 1)
     product = np.prod(terms)
     pi = 2 * product
-    
+
     return pi
