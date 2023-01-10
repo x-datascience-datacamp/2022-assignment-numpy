@@ -43,8 +43,7 @@ def max_index(X):
     if not X.ndim == 2:
         raise ValueError("X is not 2D")
 
-    # can have multiples max
-    return np.where(X == X.max())
+    return np.unravel_index(np.argmax(X, axis=None), X.shape)
 
 
 def wallis_product(n_terms):
