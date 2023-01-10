@@ -37,10 +37,16 @@ def max_index(X):
         If the input is not a numpy array or
         if the shape is not 2D.
     """
-    i = 0
+    i = 1
     j = 0
 
     # TODO
+
+    if type(X) != np.ndarray:
+        raise ValueError
+    if len(X.shape) != 2:
+        raise ValueError
+    i, j = np.where(X == np.max(X))
 
     return i, j
 
@@ -64,4 +70,11 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    return 0.
+    p = 2 * 1.0
+    if n_terms == 0:
+        return p
+
+    for i in range(1, n_terms + 1):
+        p *= (2 * i) ** 2 / ((2 * i - 1) * (2 * i + 1))
+
+    return p
