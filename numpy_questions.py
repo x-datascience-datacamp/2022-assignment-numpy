@@ -41,14 +41,12 @@ def max_index(X):
     j = 0
 
     # TODO
-    try:
-        max_val = X[i, j]
-        for (x, y), value in np.ndenumerate(X):
-            if value > max_val : 
-                max_val = value
-                i, j = x, y
-    except:
+    if (type(X) is np.ndarray) and (X.ndim == 2):
+        i, j = np.where(X == np.max(X))
+        i, j = i[0], j[0]
+    else:
         raise ValueError
+
     return i, j
 
 
@@ -73,8 +71,8 @@ def wallis_product(n_terms):
     # terms in the product. For example 10000.
 
     w_product = 1
-    if n_terms > 0 :
-        for i in range(1, n_terms+1) :
+    if n_terms > 0:
+        for i in range(1, n_terms+1):
             term = (4*i**2)/(4*i**2-1)
             w_product = w_product * term
     pi = w_product*2
