@@ -39,18 +39,16 @@ def max_index(X):
     """
     i = 0
     j = 0
-
     # TODO
-    if type(X).__module__ == np.__name__  and len(X.shape)==2:
+    if type(X).__module__ == np.__name__ and len(X.shape) == 2:
         m, n = X.shape
         for k in range(m):
-            for l in range(n):
-                if X[k][l] > X[i][j]:
-                    i, j = k, l 
+            for p in range(n):
+                if X[k][p] > X[i][j]:
+                    i, j = k, p
         return i, j
     else:
         raise ValueError
-
 
 
 def wallis_product(n_terms):
