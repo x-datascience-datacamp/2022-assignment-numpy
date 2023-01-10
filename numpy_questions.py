@@ -43,6 +43,7 @@ def max_index(X):
     if type(X) is not np.ndarray:
         raise ValueError
     (i, j) = np.where(X == X.max())
+    
     return i, j
 
 
