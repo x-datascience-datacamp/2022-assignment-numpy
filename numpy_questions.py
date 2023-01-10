@@ -39,22 +39,19 @@ def max_index(X):
     """
     if not isinstance(X, np.ndarray):
         raise ValueError("No array")
-    elif len(X.shape)!=2:
+    elif len(X.shape) != 2:
         raise ValueError("Not good shape "+ str(len(X.shape)))
     else :
-        i=0
-        j=0
-        maxi=X[i,j]
+        i = 0
+        j = 0
+        maxi = X[i,j]
         for x in range(X.shape[0]):
             for y in range(X.shape[1]):
-                if X[x,y]>maxi:
-                    i=x
-                    j=y
-                    maxi=X[i,j]
+                if X[x,y] > maxi:
+                    i = x
+                    j = y
+                    maxi = X[i, j]
     return i, j
-
-
-
 
 def wallis_product(n_terms):
     """Implement the Wallis product to compute an approximation of pi.
@@ -75,12 +72,12 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    if type(n_terms)!=int: 
+    if type(n_terms) != int: 
         raise ValueError()
-    elif n_terms<0:
+    elif n_terms<0 :
         raise ValueError()
     else: 
         prod=2
         for n in range(n_terms):
-            prod*=(4*(n+1)*(n+1))/(4*(n+1)*(n+1)-1)
+            prod *= (4*(n+1)*(n+1))/(4*(n+1)*(n+1)-1)
     return prod
