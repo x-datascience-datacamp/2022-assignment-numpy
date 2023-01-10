@@ -81,5 +81,3 @@ def wallis_product(n_terms):
     pi *= 2
 
     return pi
-
-    return 0.
