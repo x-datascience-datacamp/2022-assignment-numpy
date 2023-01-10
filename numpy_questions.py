@@ -41,7 +41,14 @@ def max_index(X):
     j = 0
 
     # TODO
-    i = 1 
+    # Validate input
+    if not isinstance(X, np.ndarray):
+        raise ValueError("Input must be a numpy array")
+    if X.ndim != 2:
+        raise ValueError("Input must be a 2D array")
+
+    # Find maximum index
+    i, j = np.unravel_index(X.argmax(), X.shape)
     return i, j
 
 
@@ -64,4 +71,14 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    return 0.
+
+    # Initialize product with first term
+    pi = 2.0
+
+    # Iterate over terms in product
+    for i in range(1, n_terms + 1):
+        # Compute term and update product
+        term = 2 * i / (2 * i - 1) * 2 * i / (2 * i + 1)
+        pi *= term
+
+    return pi
