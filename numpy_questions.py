@@ -39,7 +39,7 @@ def max_index(X):
     """
     i = 0
     j = 0
-    if not isinstance(X, np.ndarray) :
+    if not isinstance(X, np.ndarray):
         raise ValueError("value error : not an array")
     elif len(X.shape)!=2:
         raise ValueError("value error : the array is not 2d")
@@ -49,8 +49,8 @@ def max_index(X):
             for y in range(X.shape[1]):
                 if X[x][y]>max:
                     max = X[x][y]
-                    i,j = x,y 
-        return i,j
+                    i, j = x, y 
+        return i, j
 
 
 def wallis_product(n_terms):
