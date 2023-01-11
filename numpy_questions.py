@@ -42,14 +42,13 @@ def max_index(X):
 
     # TODO
 
-    if not isinstance(X, np.ndarray) or len(X.shape) != 2 :
+    if not isinstance(X, np.ndarray) or len(X.shape)!= 2:
         raise ValueError
-    
     n_samples, n_features = X.shape
     max_value = - np.inf
     for m in range(n_samples):
         for n in range(n_features):
-            if max_value < X[m, n] :
+            if max_value < X[m, n]:
                 max_value = X[m, n]
                 i = m
                 j = n
@@ -76,7 +75,7 @@ def wallis_product(n_terms):
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
     walis = 2
-    if not isinstance(n_terms, int) or n_terms < 0 :
+    if not isinstance(n_terms, int) or n_terms < 0:
         return 0
     for i in range(1, n_terms+1):
         walis *= (2*i)**2/((2*i - 1)*(2*i + 1))
