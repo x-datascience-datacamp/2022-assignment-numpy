@@ -3,7 +3,7 @@
 The goals of this assignment are:
     * Use numpy in practice with two easy exercises.
     * Use automated tools to validate the code (`pytest` and `flake8`)
-    * Submit a Pull-Request on github to practice `git`.
+    * Submit a Pull-Request on gitHub to practice `git`.
 
 The two functions below are skeleton functions. The docstrings explain what
 are the inputs, the outputs and the expected error. Fill the function to
@@ -18,18 +18,18 @@ errors by calling `flake8` at the root of the repo.
 import numpy as np
 
 
-def max_index(X):
+def max_index(x):
     """Return the index of the maximum in a numpy array.
 
     Parameters
     ----------
-    X : ndarray of shape (n_samples, n_features)
+    x : ndarray of shape (n_samples, n_features)
         The input array.
 
     Returns
     -------
     (i, j) : tuple(int)
-        The row and columnd index of the maximum.
+        The row and column index of the maximum.
 
     Raises
     ------
@@ -37,8 +37,8 @@ def max_index(X):
         If the input is not a numpy array or
         if the shape is not 2D.
     """
-    if (isinstance(X, np.ndarray)) & (np.ndim(X) == 2):
-        i, j = np.unravel_index(np.argmax(X), np.array(X).shape)
+    if (isinstance(x, np.ndarray)) & (np.ndim(x) == 2):
+        i, j = np.unravel_index(np.argmax(x), np.array(x).shape)
         return i, j
     else:
         raise ValueError
@@ -65,4 +65,3 @@ def wallis_product(n_terms):
     for i in range(1, n_terms+1):
         pi *= (2.*i)**2 / (((2.*i)-1)*((2.*i)+1))
     return 2.*pi
-
