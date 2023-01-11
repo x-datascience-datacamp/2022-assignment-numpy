@@ -42,7 +42,7 @@ def max_index(X):
 
     # TODO
 
-    if not isinstance(X, np.ndarray) or len(X.shape)!= 2:
+    if not isinstance(X, np.ndarray) or len(X.shape) != 2:
         raise ValueError
     n_samples, n_features = X.shape
     max_value = - np.inf
