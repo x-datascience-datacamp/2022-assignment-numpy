@@ -17,6 +17,7 @@ errors by calling `flake8` at the root of the repo.
 """
 import numpy as np
 
+
 def max_index(X):
     """Return the index of the maximum in a numpy array.
 
@@ -43,11 +44,7 @@ def max_index(X):
     if type(X) is not np.ndarray:
         raise ValueError
     i, j = np.where(X == np.max(X))
-     
-
     return i[0], j[0]
-
-
 
 
 def wallis_product(n_terms):
