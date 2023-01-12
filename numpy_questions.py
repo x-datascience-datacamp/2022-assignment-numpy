@@ -46,7 +46,6 @@ def max_index(X):
     # TODO
     index_m = np.argmax(X)
     i = index_m // X.shape[1]
-    
     j = index_m % X.shape[1]
 
     return (i,j)
