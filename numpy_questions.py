@@ -41,8 +41,10 @@ def max_index(X):
     j = 0
 
     # TODO
-    
-    i, j = np.where(X==np.amax(X))
+    try:
+        i, j = np.where(X == X.max())
+    except:
+        raise ValueError
 
     return i, j
 
