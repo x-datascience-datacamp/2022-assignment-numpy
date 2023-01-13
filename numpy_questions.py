@@ -38,7 +38,6 @@ def max_index(X):
     """
     i = 0
     j = 0
-
     if type(X).__module__ != np.__name__:
         raise ValueError
     elif len(X.shape) != 2:
