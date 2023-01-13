@@ -37,9 +37,9 @@ def max_index(X):
         If the input is not a numpy array or
         if the shape is not 2D.
     """
-    if not isinstance(X,np.ndarray) or len(X.shape) != 2:
+    if not isinstance(X, np.ndarray) or len(X.shape) != 2:
         raise ValueError
-        
+
     i = 0
     j = 0
 
@@ -48,9 +48,7 @@ def max_index(X):
     i = index_m // X.shape[1]
     j = index_m % X.shape[1]
 
-    return (i,j)
-
-
+    return (i, j)
 
 
 def wallis_product(n_terms):
@@ -64,7 +62,7 @@ def wallis_product(n_terms):
     n_terms : int
         Number of steps in the Wallis product. Note that `n_terms=0` will
         consider the product to be `1`.
-     
+
     Returns
     -------
     pi : float
@@ -73,12 +71,11 @@ def wallis_product(n_terms):
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
     pi = 1
-    
+
     if n_terms==0:
         return 2
-    
-    for i in range(1,n_terms+1):
-        pi = pi * (2*i/(2*i - 1)) * (2*i/(2*i + 1))
-    
-    return 2*pi
 
+    for i in range(1, n_terms+1):
+        pi = pi * (2*i/(2*i - 1)) * (2*i/(2*i + 1))
+
+    return 2*pi
