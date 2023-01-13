@@ -41,8 +41,8 @@ def max_index(X):
     j = 0
 
     # TODO
-    i = np.argmax(np.max(X, axis=1))
-    j = np.argmax(np.max(X, axis=0))
+    
+    i, j = np.where(X==np.amax(X))
 
     return i, j
 
@@ -67,7 +67,6 @@ def wallis_product(n_terms):
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
     wallis = 1
-    if n_terms!=0:
-        for k in range(1,n_terms+1):
-            wallis = wallis*(2*k/(2*k-1))*(2*k/(2*k+1))
-    return wallis
+    for k in range(1,n_terms+1):
+        wallis = wallis*(4*k**2)/(4*k**2-1)
+    return 2*wallis
