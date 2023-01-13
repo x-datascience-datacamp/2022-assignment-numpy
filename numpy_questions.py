@@ -71,7 +71,7 @@ def wallis_product(n_terms):
         The approximation of order `n_terms` of pi using the Wallis product.
     """
     # XXX : The n_terms is an int that corresponds to the number of
-    # terms in the product. For example 10000.   
+    # terms in the product. For example 10000
     # selon la formule de wallis:
     # pi/2=2*prod([4*i^2]/[4*i^2-1]) pour i=1,n
     a = 1
