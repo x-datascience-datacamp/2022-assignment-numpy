@@ -41,11 +41,14 @@ def max_index(X):
     j = 0
 
     # TODO
-    try:
-        i, j = np.where(X == X.max())
-    except:
+    if X is None:
         raise ValueError
-
+    else:
+        if len(np.shape(X)) != 2:
+            raise ValueError
+        if isinstance(X, list):
+            raise ValueError
+    i, j = np.where(X == X.max())
     return i, j
 
 
@@ -69,6 +72,6 @@ def wallis_product(n_terms):
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
     wallis = 1
-    for k in range(1,n_terms+1):
+    for k in range(1, n_terms+1):
         wallis = wallis*(4*k**2)/(4*k**2-1)
     return 2*wallis
