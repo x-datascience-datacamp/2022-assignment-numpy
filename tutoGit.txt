@@ -1,4 +1,9 @@
+
 Apprendre git
+
+git init first of all. (open the new terminal).
+
+
 
 git + url
 
@@ -6,16 +11,28 @@ git status # pour voir le dossier ou nous nous trouvons
 
 git diff#
 
-git commit# " pour commenter"
 
 git add # pour envoyer un fichier
+git commit# " pour commenter"
 
-git checkout # to create the new branch
+git checkout # to create the new branch 
 
 git remote 
 
-git push to 
+git push to # 
 
-git pull 
+git pull # pour uploader le fichier de github.
+
 
 my modification in text
+*
+
+
+Ramp
+# download the projet:
+
+be in the current folder
+
+run pip install ramp-workflow
+
+run ramp-test
