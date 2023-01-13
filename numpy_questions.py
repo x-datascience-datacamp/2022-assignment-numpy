@@ -39,9 +39,9 @@ def max_index(X):
     """
     # TODO
     if not isinstance(X, np.ndarray):
-        raise(ValueError)
+        raise (ValueError)
     elif len(X.shape) != 2:
-        raise(ValueError)
+        raise (ValueError)
     else:
         i, j = np.where(X == np.max(X))
     return i, j
