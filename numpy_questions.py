@@ -42,17 +42,17 @@ def max_index(X):
     n, m = X.shape
 
     im = 0
-    jm = 0
-    max = X[im][jm]
+    jn = 0
+    max = X[im][jn]
     for i in range(n):
         for j in range(m):
             if X[i, j] > max:
                 im = i
-                jm = j
+                jn = j
                 max = X[i, j]
     # TODO
 
-    return im, jm
+    return im, jn
 
 
 def wallis_product(n_terms):
