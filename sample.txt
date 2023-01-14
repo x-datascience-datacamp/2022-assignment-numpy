@@ -1,0 +1,11 @@
+We forked a branch from Professor's github profile
+We cloned it from our github profile.
+Created a new branch using the following command : git checkout -b "mybranch"
+The above peice is used to switch between the branches.
+git init
+git add .
+git status
+git checkout -b "new_branch"
+git status
+git commit -u "update"
+git push -u origin mybranch
