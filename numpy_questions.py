@@ -40,7 +40,12 @@ def max_index(X):
     i = 0
     j = 0
 
-    # TODO
+    if type(X).__module__ == np.__name__ and len(X.shape) > 1:
+        result = np.where(X == np.max(X))
+        i = result[0][0]
+        j = result[1][0]
+    else:
+        raise ValueError
 
     return i, j
 
@@ -62,6 +67,10 @@ def wallis_product(n_terms):
     pi : float
         The approximation of order `n_terms` of pi using the Wallis product.
     """
-    # XXX : The n_terms is an int that corresponds to the number of
-    # terms in the product. For example 10000.
-    return 0.
+
+    s = 1
+    for n in range(1, n_terms + 1):
+        s *= (2*n/(2*n-1)) * (2*n/(2*n+1))
+
+    s = s * 2
+    return s
