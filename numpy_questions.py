@@ -47,6 +47,7 @@ def max_index(X):
     else:
         raise ValueError
 
+
     return i, j
 
 
